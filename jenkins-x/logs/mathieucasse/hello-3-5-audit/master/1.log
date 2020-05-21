@@ -1,0 +1,128 @@
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-5xb82[0m
+{"level":"info","ts":1590062000.5251586,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590062000.5259662,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-lgch8[0m
+{"level":"info","ts":1590062001.483979,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590062001.4859931,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-mathieucasse-hello-3-5-audit-ma-dwzfn-629xw[0m
+{"level":"info","ts":1590062048.8605497,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590062050.0403352,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/************/hello-3-5-audit.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:dedf656656888d28b7835906bd396c8bc22fc7e7
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN express-hello@1.0.0 No repository field.
+
+added 50 packages from 37 contributors and audited 50 packages in 2.107s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> express-hello@1.0.0 test /workspace/source
+> exit 0
+
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0521 11:54:17.502772       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E0521 11:54:17.972050       9 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0521 11:54:17.975725       9 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0005] Checking for cached layer gcr.io/jenkins-x-277814/cache:1baf067b4c6bf27fa8d1daff224a730a36ecd96b17cf6072163c3445d186b305... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0013] ENV PORT 8080                                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] EXPOSE 8080                                  
+[36mINFO[0m[0013] cmd: EXPOSE                                  
+[36mINFO[0m[0013] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0013] WORKDIR /usr/src/app                         
+[36mINFO[0m[0013] cmd: workdir                                 
+[36mINFO[0m[0013] Changed working directory to /usr/src/app    
+[36mINFO[0m[0013] Creating directory /usr/src/app              
+[36mINFO[0m[0013] Resolving 1 paths                            
+[36mINFO[0m[0013] Taking snapshot of files...                  
+[36mINFO[0m[0013] COPY . .                                     
+[36mINFO[0m[0013] Resolving 550 paths                          
+[36mINFO[0m[0013] Taking snapshot of files...                  
+[36mINFO[0m[0013] Pushing layer gcr.io/jenkins-x-277814/cache:1baf067b4c6bf27fa8d1daff224a730a36ecd96b17cf6072163c3445d186b305 to cache now 
+[36mINFO[0m[0013] CMD ["npm", "start"]                         
+[36mINFO[0m[0013] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-audit[0m
+=== npm audit security report ===                        
+                                                                                
+found 0 vulnerabilities
+ in 50 scanned packages
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/hello-3-5-audit to an unshallow repository
+Generating change log from git ref a4e6278877cd1891162e0469fc7b8516f2ca6dec => 8a042963b0821c63745df551525b6b62c3225a2d
+Associating user x-0 in users.jenkins.io with email matbreak@jupimail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit dedf656656888d28b7835906bd396c8bc22fc7e7 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email matbreak@jupimail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit dedf656656888d28b7835906bd396c8bc22fc7e7 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for ************/hello-3-5-audit and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/************/hello-3-5-audit/releases/tag/v0.0.1
+generated: /workspace/source/charts/hello-3-5-audit/templates/release.yaml
+Created Release hello-3-5-audit-0-0-1 resource in namespace **
+Updating PipelineActivity ************-hello-3-5-audit-master-1 with version 0.0.1
+Updated PipelineActivities ************-hello-3-5-audit-master-1 with release notes URL: https://github.com/************/hello-3-5-audit/releases/tag/v0.0.1
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file hello-3-5-audit-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mmathieucasse-hello-3-5-audit-ma-dwzfn-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app hello-3-5-audit version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/************/environment-********-staging/pull/5
+Added label updatebot to Pull Request https://github.com/************/environment-********-staging/pull/5
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/5
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/5
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/5
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/5
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/5
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/5
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/5
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/5
+Pull Request https://github.com/************/environment-********-staging/pull/5 is merged at sha 79335639025df1302b4276c35c7e5e6ce16b9d18
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names hello-3-5-audit, **-hello-3-5-audit, **-staging-hello-3-5-audit
